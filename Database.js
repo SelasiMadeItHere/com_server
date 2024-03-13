@@ -25,6 +25,7 @@ app.use("/imageUploads", express.static("./imageUploads"));
 
 
 
+
 //Sign Up Handler
 app.post('/register', async (req, res) => {
   const { officer_name, role, mail, username, password } = req.body;
