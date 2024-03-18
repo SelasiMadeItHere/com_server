@@ -746,6 +746,19 @@ app.post('/api/transcript/finapprove', (req, res) => {
   });
 });
 
+app.post('/api/transcript/finreject', (req, res) => {
+  const { rqst_id } = req.body;
+  const sqlInsert = 'UPDATE tbltranscript_requests SET status = "rejected" WHERE rqst_id = ?';
+  pool.query(sqlInsert, [rqst_id], (err, result) => {
+    if (err) {
+      console.log(err);
+      res.status(500).json({ success: false, message: 'Failed to update status.' });
+    } else {
+      res.status(200).json({ success: true, message: 'Status updated successfully.' });
+    }
+  });
+});
+
 //...Registrar Gets from Finance
 app.get('/api/getfinanceapprovedtranscripts', (req, res) => {
   const sqlGet = "SELECT * FROM tbltranscript_requests WHERE status = 'verified' ORDER BY updated_at DESC";
