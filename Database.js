@@ -515,7 +515,8 @@ app.post('/login', async (req, res) => {
 
 
 //MYSQL
-const pool = createPool({ host: "localhost", user: "root", password: "", database: "requests", connectionLimit: 10 })
+// const pool = createPool({ host: "localhost", user: "root", password: "", database: "requests", connectionLimit: 10 })
+const pool = createPool({ host: "wia.h.filess.io", user: "ComServer_rawquickly", password: "68bc58d55554eb5f3122c863e61f35b8d938d2ed", port:"3307", database: "ComServer_rawquickly", connectionLimit: 10 })
 
 //DEFERMENT************************************************************************************************************************************
 
