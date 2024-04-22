@@ -25,6 +25,14 @@ app.use("/imageUploads", express.static("./imageUploads"));
 
 
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://ait-marketplace.onrender.com');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+  next();
+});
+
+
 
 //Sign Up Handler
 app.post('/register', async (req, res) => {
