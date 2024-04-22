@@ -7,7 +7,7 @@ const multer = require('multer');
 const path = require('path');
 const nodemailer = require('nodemailer');
 const MailMessage = require('nodemailer/lib/mailer/mail-message');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const secretKey = process.env.JWT_SECRET_KEY;
 
