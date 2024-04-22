@@ -468,7 +468,7 @@ app.post('/login', async (req, res) => {
       if (passwordMatch) {
         req.session.user = user;
         res.status(200).send('Login successful.');
-      } 
+      }
     }
   });
 });
@@ -516,13 +516,13 @@ app.post('/login', async (req, res) => {
 
 //MYSQL
 // const pool = createPool({ host: "localhost", user: "root", password: "", database: "requests", connectionLimit: 10 })
-const pool = createPool({ host: "wia.h.filess.io", user: "ComServer_rawquickly", password: "68bc58d55554eb5f3122c863e61f35b8d938d2ed", port:"3307", database: "ComServer_rawquickly", connectionLimit: 10 })
+const pool = createPool({ host: "wia.h.filess.io", user: "ComServer_rawquickly", password: "68bc58d55554eb5f3122c863e61f35b8d938d2ed", port: "3307", database: "ComServer_rawquickly", connectionLimit: 10 })
 
 //DEFERMENT************************************************************************************************************************************
 
 //application for deferment from web interface
 app.post('/api/newdefer', (req, res) => {
-  const { rqst_id, stuid, phone,clevel, csem,defsem, defyear, retsem, retyear, reason } = req.body;
+  const { rqst_id, stuid, phone, clevel, csem, defsem, defyear, retsem, retyear, reason } = req.body;
   const dateApplied = new Date();
 
 
