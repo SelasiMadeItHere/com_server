@@ -13,7 +13,7 @@ const secretKey = process.env.JWT_SECRET_KEY;
 
 
 const app = express()
-const port = process.env.PORT || 5002
+const port = process.env.PORT || 5003
 
 app.use(cors())
 app.use(express.json())
