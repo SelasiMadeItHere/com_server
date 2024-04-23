@@ -2,7 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { createPool } = require('mysql');
-const cors = require('cors')
+const cors = require('cors');
 const multer = require('multer');
 const path = require('path');
 const nodemailer = require('nodemailer');
@@ -26,7 +26,7 @@ app.use("/imageUploads", express.static("./imageUploads"));
 
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://ait-marketplace.onrender.com');
+  res.header('Access-Control-Allow-Origin', 'https://ait-marketplace-n4t0.onrender.com');
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
   res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization');
   next();
